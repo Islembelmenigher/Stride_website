@@ -1,0 +1,109 @@
+<canvas id="gl"></canvas>
+
+<nav id="nav">
+  <div class="nav-left">
+    <span class="mark"><svg viewBox="0 0 24 24"><path d="M3.5 17.5l5.2-7.4 3.4 4.4 2.6-3.2 5.8 6.2"/></svg></span>
+    <span class="wordmark">Stride</span>
+  </div>
+  <div class="nav-mid" id="navMid">
+    <span class="hl" id="navHl"></span>
+    <a href="#flavors" data-i="0" class="on">Flavors</a>
+    <a href="#inside" data-i="1">Inside</a>
+    <a href="#shop" data-i="2">Shop</a>
+    <a href="#range" data-i="3">Range</a>
+  </div>
+  <div class="nav-right">
+    <span class="chip">% OFF</span>
+    <button class="basket" id="basket" aria-label="Cart">
+      <svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a1.6 1.6 0 0 1-1.6 1.4H7.8a1.6 1.6 0 0 1-1.6-1.4L5 8z"/><path d="M9 8V6.4A3 3 0 0 1 12 3.4a3 3 0 0 1 3 3V8"/></svg>
+      <span id="cartN">0</span>
+    </button>
+    <button class="dibs">First dibs</button>
+  </div>
+</nav>
+
+<section id="flavors">
+  <div class="reveal" id="reveal"></div>
+  <div class="rings" id="rings"></div>
+  <div class="bits" id="bits"></div>
+  <div class="arc" id="arc"></div>
+  <button id="play" aria-label="Next flavour">
+    <svg viewBox="0 0 24 24"><path d="M3 12h17"/><path d="M14 6l6 6-6 6"/></svg>
+  </button>
+  <h1 id="title" aria-live="polite"></h1>
+  <div id="count" aria-hidden="true">02</div>
+  <button id="auto" aria-pressed="true"><span class="ring" id="autoGlyph"></span><span>AUTOPLAY</span></button>
+</section>
+
+<section id="inside">
+  <div class="pin">
+    <div class="in-dark" id="inDark"></div>
+    <div class="frame">
+      <div class="numwrap" id="numWrap"><div class="in-num" id="inNum">01</div></div>
+      <div id="inBar"></div>
+    </div>
+  </div>
+</section>
+
+<div id="inFront">
+  <div class="frame">
+    <h2 class="in-head" id="inHead">REAL FOOD,<br>FIRST</h2>
+    <div class="in-icons" id="inIcons">
+      <button class="in-ico on" data-step="0" aria-label="Step 1: real food">
+        <svg viewBox="0 0 24 24"><path d="M5 19C5 11 10 6 19 6c0 8-5 13-13 13z"/><path d="M5 19c3-4 6-6 9-7"/></svg>
+      </button>
+      <button class="in-ico" data-step="1" aria-label="Step 2: pressed, not baked">
+        <svg viewBox="0 0 24 24"><ellipse cx="9" cy="7" rx="2.2" ry="3.4"/><ellipse cx="15" cy="7" rx="2.2" ry="3.4"/><ellipse cx="9" cy="14" rx="2.2" ry="3.4"/><ellipse cx="15" cy="14" rx="2.2" ry="3.4"/></svg>
+      </button>
+      <button class="in-ico" data-step="2" aria-label="Step 3: wrapped same day">
+        <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.2A3.8 3.8 0 0 1 12 8a3.8 3.8 0 0 1 7 2.8C19 15.6 12 20 12 20z"/></svg>
+      </button>
+      <button class="in-ico" data-step="3" aria-label="Step 4: the flavour">
+        <svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg>
+      </button>
+    </div>
+    <p class="in-cap" id="inCap">Oats, nuts, fruit.<br>Nothing you can't say.</p>
+  </div>
+  <div class="storm" id="storm"></div>
+</div>
+
+<section id="shop">
+  <h2 class="shop-head"><span class="line"><span>GRAB</span></span><span class="line"><span>A BAG</span></span></h2>
+  <p class="shop-cap">Five bold flavours. Same<br>real ingredients. Pick your<br>favourite (or try them all).</p>
+  <div class="cards" id="cards"></div>
+</section>
+
+<section id="range">
+  <h2 class="range-head">
+    <span class="line"><span>BUILD YOUR</span></span>
+    <span class="line"><span><span class="n3">3</span> PACK &amp;</span></span>
+    <span class="line"><span>SAVE $1.49</span></span>
+  </h2>
+  <div class="glow" id="glow">
+    <div class="slot empty" data-i="0">
+      <button class="slot-x" aria-label="Remove bar from pack"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <div class="slot-bar"></div>
+    </div>
+    <div class="slot empty" data-i="1">
+      <button class="slot-x" aria-label="Remove bar from pack"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <div class="slot-bar"></div>
+    </div>
+    <div class="slot empty" data-i="2">
+      <button class="slot-x" aria-label="Remove bar from pack"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <div class="slot-bar"></div>
+    </div>
+  </div>
+  <div class="thumbs" id="thumbs"></div>
+  <button id="buy" disabled><span class="bl">Pick 3 more</span><span class="bp">$7.48</span></button>
+</section>
+
+<div id="intro">
+  <video id="introVid" muted playsinline preload="auto" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261116_131908_b6239896-c077-450c-ad91-575153973fcf.mp4"></video>
+  <button class="skip" id="skip">Skip intro</button>
+  <div class="stamp" id="stamp">
+    <div class="inner">
+      <div class="stamp-mark"><svg viewBox="0 0 24 24"><path d="M3.5 17.5l5.2-7.4 3.4 4.4 2.6-3.2 5.8 6.2"/></svg></div>
+      <div class="stamp-word">STRIDE</div>
+    </div>
+  </div>
+</div>
